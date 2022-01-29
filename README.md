@@ -6,7 +6,7 @@ O blazebot é uma ferramenta escrita em python utilizando Selenium para aprendiz
 
 ### Setup
 - unzip o arquivo chromedriver_linux64.zip
-- instale as dependências listadas 
+- instale as dependências listadas no arquivo ```requirements.txt```
 - copie o arquivo ```.env.example``` e renomeie para ```.env```
 - defina os valores das variáveis no arquivo env para o programa funcionar:
     * BLAZE_USERNAME: usuário cadastrado no site blaze.com
