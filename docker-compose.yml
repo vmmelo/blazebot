@@ -1,0 +1,24 @@
+version: '3'
+services:
+  backend:
+    build: .
+    volumes:
+      - '.:/app'
+    ports:
+      - "$HTTP_PORT:5000"
+    env_file:
+      - .env
+    networks:
+      - writeme-network
+    depends_on:
+      - redis_service
+  redis_service:
+    image: redis:alpine
+    container_name: writeme-redis
+    expose:
+      - 6379
+    networks:
+      - writeme-network
+networks:
+    writeme-network:
+        driver: bridge
